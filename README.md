@@ -24,6 +24,7 @@ After succesfully labelling the images they were exported as a ground truth obje
 
 The last fully connected layers of the Inceptionv3 model, which was initially trained for image classification on 1000 objects were replaced for pixel wise classification as shown below. The network was trained for semantic segmentation of food items in a plate
 
+![](https://github.com/joseashly999/Transfer_learning/blob/main/Screenshot%202023-05-14%20101731.png)
 
 
  
