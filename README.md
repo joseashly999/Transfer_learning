@@ -18,5 +18,12 @@ item from the ROI Labels in the app. To ensure every pixel in the picture is lab
 After succesfully labelling the images they were exported as a ground truth object into the MATLAB workspace. The dataset were then divided into training and validation sets using the dunction partitionData.m . 
 
 # Implementation and testing
- The inceptionv3 network model was installed and loaded into the *Deep network designer* app in MATLAB. The training and validation sets were imported into it as well.
+ The inceptionv3 network model was installed and loaded into the *Deep network designer* app in MATLAB. The training and validation sets were imported into it as well. Below is the first few observations of the imported imagedatastore and pixellabeldatastore objects
+
+![importeddata](https://github.com/joseashly999/Transfer_learning/blob/main/fulleng.png)
+
+The last fully connected layers of the Inceptionv3 model, which was initially trained for image classification on 1000 objects were replaced for pixel wise classification as shown below. The network was trained for semantic segmentation of food items in a plate
+
+
+
  
