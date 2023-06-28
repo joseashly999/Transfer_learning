@@ -7,3 +7,16 @@ using MATLAB apps and functions. The entire experiments were carried with a sing
 # Custom Created Dataset
 the dataset created contains popular british food items obtained from the publically available websites and captured on an android phone. the data set is included in this repository by the name preprocessed_data. A small snip of the folder is shown below.
 ![dataset](https://github.com/joseashly999/Transfer_learning/blob/main/data1.png)
+
+
+# Labelling the Data set
+Since the pre trained model used in this experiment required input image dimension of 299 x299 x3, The entire set of images were preprocessed and resized in the *Image Batch processor* app in MATLAB before pixel labelling them. The processed images were exported to a folder in .png format.
+The images were labeled using the *Image labeler* app in MATLAB. I considered Semantic segmentation of different classes of food in an image over the traditional bounding box approach. Since food is mostly amorphous this approach was appropriate. Pixel labels were created for each 
+item from the ROI Labels in the app. To ensure every pixel in the picture is labelled, a ‘background’ label was applied to every image before labeling the food in it. When you apply a new label to an object it replaces the old label.
+
+# Exporting the Ground truth
+After succesfully labelling the images they were exported as a ground truth object into the MATLAB workspace. The dataset were then divided into training and validation sets using the dunction partitionData.m . 
+
+# Implementation and testing
+ The inceptionv3 network model was installed and loaded into the *Deep network designer* app in MATLAB. The training and validation sets were imported into it as well.
+ 
